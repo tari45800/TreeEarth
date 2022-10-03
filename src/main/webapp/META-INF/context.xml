@@ -10,7 +10,7 @@
 		auth="Container"
 		type="javax.sql.DataSource"
 		driverClassName="com.mysql.cj.jdbc.Driver"
-		url="jdbc:mysql://localhost:3306/treeEarth"
+		url="jdbc:mysql://localhost:3306/treeearth"
 		username="root"
 		password="1234"
 		maxTotal = "20" maxIdle = "10" maxWaitMillis = "-1"

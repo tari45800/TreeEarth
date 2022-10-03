@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<h1>머리</h1>
-
+	<h1>주문 상세 조회 페이지</h1>
 </body>
 </html>
