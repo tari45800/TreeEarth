@@ -18,7 +18,7 @@
 	<a href="SupportList.su">후원</a>
 <!-- 	<a href="StoreItemList.st">스토어</a> -->
 	<a href="StoreItemList.st?sto_category=반려나무">스토어</a>
-	<a href="DiaryList.cm">커뮤니티</a>
+	<a href="CampaignReviewList.cm">커뮤니티</a>
 	
 	<!-- 헤더 -->
 	<jsp:include page="hf/footer.jsp" ></jsp:include>

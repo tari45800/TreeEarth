@@ -7,10 +7,6 @@ import javax.sql.*;
 
 public class JdbcUtil {
 
-	
-	// ----------------------------------------------------------------------------------------
-
-	
 	public static Connection getConnection() {
 		
 		Connection con = null;
@@ -22,6 +18,9 @@ public class JdbcUtil {
 			DataSource ds = (DataSource)initCtx.lookup("java:comp/env/jdbc/MySQL");
 			
 			con = ds.getConnection();
+			
+			//트랜잭션 처리
+			//commit, rollback 작업 수동으로 실행해야 함.
 			con.setAutoCommit(false);
 			
 		} catch (NamingException e) {
@@ -36,10 +35,6 @@ public class JdbcUtil {
 		
 	}
 	
-	
-	// ----------------------------------------------------------------------------------------
-	
-	
 	public static void close(Connection con) {
 		
 		try {
@@ -49,7 +44,6 @@ public class JdbcUtil {
 		}
 		
 	}
-	
 	
 	public static void close(PreparedStatement pstmt) {
 		
@@ -61,8 +55,6 @@ public class JdbcUtil {
 		
 	}
 	
-	
-	
 	public static void close(ResultSet rs) {
 		
 		try {
@@ -73,7 +65,6 @@ public class JdbcUtil {
 		
 	}
 	
-	
 	public static void commit(Connection con) {
 		try {
 			con.commit();
@@ -82,7 +73,6 @@ public class JdbcUtil {
 			System.out.println("jdbcUtil - commit() 오류");
 		}
 	}
-	
 	
 	public static void rollback(Connection con) {
 		try {
